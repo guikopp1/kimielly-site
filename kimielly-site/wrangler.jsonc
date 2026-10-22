@@ -1,5 +1,4 @@
 {
-  // Configuração do Cloudflare Workers (via OpenNext).
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "kimielly-site",
   "main": ".open-next/worker.js",
@@ -12,12 +11,13 @@
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
-      "service": "kimielly-site
+      "service": "kimielly-site"
     }
   ],
   "images": {
-    // Otimização das fotos pelo Cloudflare Images
     "binding": "IMAGES"
   },
-  "observability": { "enabled": true }
+  "observability": {
+    "enabled": true
+  }
 }
