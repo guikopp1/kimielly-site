@@ -1,1 +1,0 @@
-Retrato profissional e fotos do espaço. Registre em src/config/site.ts -> profissional.foto / fotosEspaco.
