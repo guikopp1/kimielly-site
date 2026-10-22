@@ -1,0 +1,1 @@
+Logotipo original (opcional). Registre em src/config/site.ts -> profissional.logo.

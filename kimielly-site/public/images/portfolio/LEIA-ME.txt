@@ -1,0 +1,4 @@
+Coloque aqui as fotos ORIGINAIS dos trabalhos (JPG/WEBP, lado maior ~2000 px).
+Use somente fotos com autorização da cliente retratada.
+Depois, registre cada foto em src/config/site.ts -> portfolio:
+  { src: "/images/portfolio/nome-do-arquivo.jpg", alt: "descrição", categoria: "maquiagem", autorizada: true }
