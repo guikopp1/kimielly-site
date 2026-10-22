@@ -7,6 +7,11 @@ export const contentType = "image/png";
 
 /** Imagem de compartilhamento (Open Graph) gerada com a identidade do site. */
 export default function OpengraphImage() {
+  // O gerador de imagens exige `display: flex` em toda <div> e textos como uma única string.
+  const nome = site.profissional.nome;
+  const assinatura = site.profissional.assinatura.toUpperCase();
+  const local = `${site.endereco.cidade} · ${site.endereco.uf} — agende online`;
+
   return new ImageResponse(
     (
       <div
@@ -37,13 +42,9 @@ export default function OpengraphImage() {
         >
           KW
         </div>
-        <div style={{ marginTop: 44, fontSize: 76 }}>{site.profissional.nome}</div>
-        <div style={{ marginTop: 14, fontSize: 26, letterSpacing: 8, color: "#c3a06a", textTransform: "uppercase" }}>
-          {site.profissional.assinatura}
-        </div>
-        <div style={{ marginTop: 40, fontSize: 26, color: "rgba(250,247,242,0.65)" }}>
-          {site.endereco.cidade} · {site.endereco.uf} — agende online
-        </div>
+        <div style={{ display: "flex", marginTop: 44, fontSize: 76 }}>{nome}</div>
+        <div style={{ display: "flex", marginTop: 14, fontSize: 26, letterSpacing: 8, color: "#c3a06a" }}>{assinatura}</div>
+        <div style={{ display: "flex", marginTop: 40, fontSize: 26, color: "rgba(250,247,242,0.65)" }}>{local}</div>
       </div>
     ),
     size,
